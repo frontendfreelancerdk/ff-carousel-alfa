@@ -2,7 +2,7 @@
   <div class="prev" (click)="previousSlide()"></div>
   <div class="ff-slider__list">
     <div class="ff-slider__tracker" [ngStyle]="{left: left+'px', transition : transition}">
-      <div #slide class="ff-slider__slide" *ngFor="let image of images | clone;let i = index"
+      <div #slide class="ff-slider__slide" *ngFor="let image of (images | clone:amountClone);let i = index"
            [ngClass]="{'center': i === currentTarget}"
            (click)="selectItem ? select(slide) : false">
         <img #img *ngIf="image.url" src="{{image.url}}" alt="" (load)="i===0 ? onLoad(img): 0">

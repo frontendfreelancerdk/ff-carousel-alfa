@@ -35,6 +35,7 @@ export class CarouselComponent implements OnDestroy {
     }
 
     _images = [];
+    amountClone = 0;
     length : any;
     sliderWidth : any;
     slideWidth : any;
@@ -61,6 +62,7 @@ export class CarouselComponent implements OnDestroy {
         this.length = this.images.length;
         this.center = (this.sliderWidth - (this.length * this.slideWidth)) / 2 - (this.slideWidth * (this.length - 1) / 2);
         this.left = this.center;
+        this.amountClone = Math.round(this.sliderWidth / (this.length * this.slideWidth) * 2);
         this.play();
     }
 

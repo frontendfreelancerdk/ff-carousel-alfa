@@ -10,12 +10,16 @@ export class ClonePipe implements PipeTransform {
     if(!items){
       return items;
     }
-    const newArr = items,
-      firstItems = [items[0]],
+    let newArr = items;
+    const firstItems = [items[0]],
       lastItems = [];
     for (let i = 1, len = items.length; i < len; i++) {
       const cloneItem = items[i];
       lastItems.push(cloneItem);
+    }
+    while(numbers){
+        newArr = Array.prototype.concat(newArr,items);
+        numbers--;
     }
     return Array.prototype.concat(lastItems, newArr , firstItems);
   }
