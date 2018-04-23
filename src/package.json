@@ -1,0 +1,28 @@
+{
+  "name": "ff-carousel",
+  "version": "0.4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendfreelancerdk/ff-carousel.git"
+  },
+  "author": {
+    "name": "Frontend Freelancer",
+    "email": "marat@frontend-freelancer.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frontendfreelancerdk/ff-carousel.git/issues"
+  },
+  "main": "ff-carousel.umd.js",
+  "module": "ff-carousel.js",
+  "jsnext:main": "ff-carousel.js",
+  "typings": "ff-carousel.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}

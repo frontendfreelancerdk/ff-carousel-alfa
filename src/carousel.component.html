@@ -1,0 +1,15 @@
+<div *ngIf="images && images.length" class="ff-slider" (mouseout)="play()" (mouseover)="stop()">
+  <div class="prev" (click)="previousSlide()"></div>
+  <div class="ff-slider__list">
+    <div class="ff-slider__tracker" [ngStyle]="{left: left+'px', transition : transition}">
+      <div #slide class="ff-slider__slide" *ngFor="let image of images | clone;let i = index"
+           [ngClass]="{'center': i === currentTarget}"
+           (click)="selectItem ? select(slide) : false">
+        <img #img *ngIf="image.url" src="{{image.url}}" alt="" (load)="i===0 ? onLoad(img): 0">
+        <img *ngIf="shadow" src="{{shadow}}" alt="">
+        <h2 *ngIf="image.title">{{image.title}}</h2>
+      </div>
+    </div>
+  </div>
+  <div class="next" (click)="nextSlide()"></div>
+</div>
