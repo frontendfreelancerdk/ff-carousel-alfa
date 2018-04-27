@@ -5,8 +5,8 @@
       <div #slide class="ff-slider__slide" *ngFor="let image of (images | clone:amountClone);let i = index"
            [ngClass]="{'center': i === currentTarget}"
            (click)="selectItem ? select(slide) : false">
-        <img #img *ngIf="image.url" src="{{image.url}}" alt="" (load)="i===0 ? onLoad(img): 0">
-        <img *ngIf="shadow" src="{{shadow}}" alt="">
+        <img #img *ngIf="image.url" src="{{urlPrefix + image.url}}" alt="" (load)="i===0 ? onLoad(img): 0">
+        <img *ngIf="shadow" src="{{urlPrefix + shadow}}" alt="">
         <h2 *ngIf="image.title">{{image.title}}</h2>
       </div>
     </div>

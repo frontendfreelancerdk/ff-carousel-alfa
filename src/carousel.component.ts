@@ -18,6 +18,7 @@ export class CarouselComponent implements OnDestroy {
     @Input() buttons = true;
     @Input() selectItem = true;
     @Input() shadow = '';
+    @Input() urlPrefix = '';
 
     @Input()
     set images(value) {
